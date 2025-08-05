@@ -43,7 +43,8 @@ namespace System.UI.Widget
 
 		private Toast _toast;
 
-		internal CancellationToken CancellationToken { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        internal CancellationToken CancellationToken { get; set; }
 
 		public bool IsAsync = false;
 
@@ -65,8 +66,8 @@ namespace System.UI.Widget
 			Location = new Point(workingArea.Right - Size.Width - _horizontalMargin,
 				workingArea.Bottom - Size.Height - _verticalMargin);
 		}
-
-		internal Toast Toast
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        internal Toast Toast
 		{
 			get => _toast;
 			set => _toast = value;
@@ -103,7 +104,8 @@ namespace System.UI.Widget
 
 		}
 
-		internal Image Thumbnails
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        internal Image Thumbnails
 		{
 			get => picImage.Image;
 			set
